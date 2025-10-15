@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Scientific Calculator</h1>
+        </header>
+        
+        <!--  -->
+        
+        <div class="calculator">
+            <div class="display">
+                <div class="mode-indicator" id="modeIndicator">DEG</div>
+                <div class="expression" id="expression"></div>
+                <div class="result" id="result">0</div>
+            </div>
+            
+            <div class="buttons">
+                <!-- Row 1 -->
+                <button class="btn clear" aria-label="All Clear" data-action="ac">AC</button>
+                <button class="btn clear" aria-label="Clear" data-action="c">C</button>
+                <button class="btn clear" aria-label="Backspace" data-action="backspace">⌫</button>
+                <button class="btn operator" aria-label="Divide" data-value="/">÷</button>
+                <button class="btn memory" aria-label="Memory Clear" data-action="mc">MC</button>
+                
+                <!-- Row 2 -->
+                <button class="btn" aria-label="Open Parenthesis" data-value="(">(</button>
+                <button class="btn" aria-label="Close Parenthesis" data-value=")">)</button>
+                <button class="btn function" aria-label="Sine" data-value="sin(">sin</button>
+                <button class="btn function" aria-label="Cosine" data-value="cos(">cos</button>
+                <button class="btn memory" aria-label="Memory Recall" data-action="mr">MR</button>
+                
+                <!-- Row 3 -->
+                <button class="btn" aria-label="7" data-value="7">7</button>
+                <button class="btn" aria-label="8" data-value="8">8</button>
+                <button class="btn" aria-label="9" data-value="9">9</button>
+                <button class="btn operator" aria-label="Multiply" data-value="*">×</button>
+                <button class="btn memory" aria-label="Memory Minus" data-action="m-">M-</button>
+                
+                <!-- Row 4 -->
+                <button class="btn" aria-label="4" data-value="4">4</button>
+                <button class="btn" aria-label="5" data-value="5">5</button>
+                <button class="btn" aria-label="6" data-value="6">6</button>
+                <button class="btn operator" aria-label="Subtract" data-value="-">-</button>
+                <button class="btn memory" aria-label="Memory Plus" data-action="m+">M+</button>
+                
+                <!-- Row 5 -->
+                <button class="btn" aria-label="1" data-value="1">1</button>
+                <button class="btn" aria-label="2" data-value="2">2</button>
+                <button class="btn" aria-label="3" data-value="3">3</button>
+                <button class="btn operator" aria-label="Add" data-value="+">+</button>
+                <button class="btn function" aria-label="Pi" data-value="π">π</button>
+                
+                <!-- Row 6 -->
+                <button class="btn" aria-label="0" data-value="0">0</button>
+                <button class="btn" aria-label="Decimal Point" data-value=".">.</button>
+                <button class="btn function" aria-label="Exponent" data-value="^">x^y</button>
+                <button class="btn function" aria-label="Square Root" data-value="√(">√</button>
+                <button class="btn function" aria-label="Euler's Number" data-value="e">e</button>
+                
+                <!-- Row 7 -->
+                <button class="btn function" aria-label="Tangent" data-value="tan(">tan</button>
+                <button class="btn function" aria-label="Arcsine" data-value="asin(">asin</button>
+                <button class="btn function" aria-label="Arccosine" data-value="acos(">acos</button>
+                <button class="btn function" aria-label="Arctangent" data-value="atan(">atan</button>
+                <button class="btn function" aria-label="Logarithm" data-value="log(">log</button>
+                
+                <!-- Row 8 -->
+                <button class="btn function" aria-label="Natural Logarithm" data-value="ln(">ln</button>
+                <button class="btn function" aria-label="Factorial" data-value="!">x!</button>
+                <button class="btn function" aria-label="Percent" data-value="%">%</button>
+                <button class="btn function" aria-label="Nth Root" data-value="√("><sup>y</sup>√x</button>
+                <button class="btn" aria-label="Toggle Mode" data-action="toggleMode">MODE</button>
+                
+                <!-- Row 9 -->
+                <button class="btn equals" aria-label="Equals" data-action="equals">=</button>
+            </div>
+            
+            <div class="history-container">
+                <div class="history-title">
+                    <span>History</span>
+                    <button class="btn clear" style="padding: 5px 10px; font-size: 0.8rem;" aria-label="Clear History" data-action="clearHistory">Clear</button>
+                </div>
+                <ul class="history-list" id="historyList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
